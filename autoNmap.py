@@ -2,7 +2,7 @@ import logging
 try:
     import nmap
 except:
-    logging.error("Falta la libreria nmap \n pip install nmap")
+    logging.error("Falta la libreria nmap \n pip install python3-nmap")
 import requests
 import socket
 
