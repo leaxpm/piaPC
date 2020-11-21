@@ -70,9 +70,8 @@ E. Run Nmap Module
 ---------------
 
     1. To use -N or --nmap is required to install Nmap Follow Step E-A
-    2. FTP Module requires a host given by --host
-    3-A. User and Password must be given with --user and --password 
-    3-B. Use --anonymous for Anonymous login
+    2-A. Use --public for Scan your public IP
+    2-B. Use --private to Scan your complete private mask
 
 E-A. Install Nmap 
 ---------------
