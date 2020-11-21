@@ -9,7 +9,7 @@ Welcome to AutoHacker's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-    
+
 
 Indices and tables
 ==================
@@ -24,6 +24,8 @@ Documentation for the Code
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+.. include:: README.rst   
    
 AutoHacker main
 ===================

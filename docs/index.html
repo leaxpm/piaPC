@@ -84,7 +84,24 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to AutoHacker’s documentation!</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
-<li><a class="reference internal" href="#documentation-for-the-code">Documentation for the Code</a></li>
+<li><a class="reference internal" href="#documentation-for-the-code">Documentation for the Code</a><ul>
+<li><a class="reference internal" href="#pia-autohacker">PIA: AutoHacker</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration-of-project-environment">Configuration of Project Environment</a><ul>
+<li><a class="reference internal" href="#proyecto-final-programa-ciberseguridad">Proyecto Final Programa Ciberseguridad</a></li>
+<li><a class="reference internal" href="#overview-on-how-to-run">Overview on How to Run</a></li>
+<li><a class="reference internal" href="#setup-procedure">Setup procedure</a></li>
+<li><a class="reference internal" href="#a-configure-project-environment-create-a-virtual-environment">A. Configure project environment (Create a Virtual Environment)</a></li>
+<li><a class="reference internal" href="#b-run-pia-py">B. Run PIA.py</a></li>
+<li><a class="reference internal" href="#c-run-hunter-module">C. Run Hunter Module</a></li>
+<li><a class="reference internal" href="#d-run-metadata-module">D. Run Metadata Module</a></li>
+<li><a class="reference internal" href="#d-run-ftp-module">D. Run FTP Module</a></li>
+<li><a class="reference internal" href="#e-run-nmap-module">E. Run Nmap Module</a></li>
+<li><a class="reference internal" href="#e-a-install-nmap">E-A. Install Nmap</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-PIA">AutoHacker main</a></li>
@@ -172,6 +189,136 @@
 <div class="section" id="documentation-for-the-code">
 <h2>Documentation for the Code<a class="headerlink" href="#documentation-for-the-code" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+</div>
+<div class="section" id="pia-autohacker">
+<h3>PIA: AutoHacker<a class="headerlink" href="#pia-autohacker" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="configuration-of-project-environment">
+<h2>Configuration of Project Environment<a class="headerlink" href="#configuration-of-project-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="proyecto-final-programa-ciberseguridad">
+<h3>Proyecto Final Programa Ciberseguridad<a class="headerlink" href="#proyecto-final-programa-ciberseguridad" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="overview-on-how-to-run">
+<h3>Overview on How to Run<a class="headerlink" href="#overview-on-how-to-run" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Install requirements.txt</p></li>
+<li><p>Run PIA.py -h</p></li>
+</ol>
+</div>
+<div class="section" id="setup-procedure">
+<h3>Setup procedure<a class="headerlink" href="#setup-procedure" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="a-configure-project-environment-create-a-virtual-environment">
+<h3>A. Configure project environment (Create a Virtual Environment)<a class="headerlink" href="#a-configure-project-environment-create-a-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><dl>
+<dt>Create a Python Virtual Environment</dt><dd><ul>
+<li><p>Install virtualenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create virtialenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">virtualenv</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span> <span class="o">&lt;</span><span class="n">name</span> <span class="n">of</span> <span class="n">virtualenv</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install pipenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create virtialenv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pipenv</span> <span class="n">shell</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install requirements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
+<div class="section" id="b-run-pia-py">
+<h3>B. Run PIA.py<a class="headerlink" href="#b-run-pia-py" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>python3 PIA.py</p>
+</div></blockquote>
+</div>
+<div class="section" id="c-run-hunter-module">
+<h3>C. Run Hunter Module<a class="headerlink" href="#c-run-hunter-module" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>You need to login in <a class="reference external" href="https://hunter.io/">https://hunter.io/</a></p></li>
+<li><p>Find your api key on <a class="reference external" href="https://hunter.io/api">https://hunter.io/api</a></p></li>
+<li><p>Use –apiKey and add yours</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="d-run-metadata-module">
+<h3>D. Run Metadata Module<a class="headerlink" href="#d-run-metadata-module" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>You need to use argument -M or –metadata</p></li>
+<li><p>Use –link and add the link you wanna scrap</p></li>
+<li><p>Wait the images and the output on images/ folder</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="d-run-ftp-module">
+<h3>D. Run FTP Module<a class="headerlink" href="#d-run-ftp-module" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>You need to use argument -FTP or –ftp</p></li>
+<li><p>FTP Module requires a host given by –host</p></li>
+<li><ol class="upperalpha simple">
+<li><p>User and Password must be given with –user and –password</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="2">
+<li><p>Use –anonymous for Anonymous login</p></li>
+</ol>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="e-run-nmap-module">
+<h3>E. Run Nmap Module<a class="headerlink" href="#e-run-nmap-module" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>To use -N or –nmap is required to install Nmap Follow Step E-A</p></li>
+<li><ol class="upperalpha simple">
+<li><p>Use –public for Scan your public IP</p></li>
+</ol>
+</li>
+<li><ol class="upperalpha simple" start="2">
+<li><p>Use –private to Scan your complete private mask</p></li>
+</ol>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="e-a-install-nmap">
+<h3>E-A. Install Nmap<a class="headerlink" href="#e-a-install-nmap" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Follow this link for official info <a class="reference external" href="https://nmap.org/">https://nmap.org/</a></p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Documentation generated using Sphinx.</p></li>
+</ul>
+</div></blockquote>
 </div>
 </div>
 </div>
