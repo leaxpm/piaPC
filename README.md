@@ -5,14 +5,10 @@
 Configuration of Project Environment
 *************************************
 
-
-Proyecto Final Programa Ciberseguridad
-*************************************
-
 Overview on How to Run 
 ------------------------------------------------------------------------------------------------ 
-1. Install requirements.txt
-2. Run PIA.py -h
+     1. Install requirements.txt
+     2. Run PIA.py -h
 
 
 Setup procedure
@@ -22,26 +18,26 @@ Setup procedure
 A. Configure project environment (Create a Virtual Environment)
 ------------------------------------------------------------------------------------------------
 
-1. Create a Python Virtual Environment
-    - Install virtualenv::
+     1. Create a Python Virtual Environment
+         - Install virtualenv::
 
-        sudo pip install virtualenv
+             sudo pip install virtualenv
 
-    - Create virtialenv::
+         - Create virtialenv::
 
-        virtualenv -p python3 <name of virtualenv>
+              virtualenv -p python3 <name of virtualenv>
     
-    - Install pipenv::
+         - Install pipenv::
 
-        sudo pip install pipenv
+              sudo pip install pipenv
 
-    - Create virtialenv::
+         - Create virtialenv::
 
-        pipenv shell
+              pipenv shell
 
-    - Install requirements::
+         - Install requirements::
 
-        pip install -r requirements.txt
+              pip install -r requirements.txt
 
         
 
