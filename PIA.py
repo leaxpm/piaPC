@@ -7,6 +7,7 @@ def main():
     """
     import argparse
     import logging
+    import Report
     parser = argparse.ArgumentParser(prog='Auto-Hacker', description='Accesorios Para Hacker', epilog='Usar baja su propio riesgo no nos hacemos responsables del uso incorrecto')
     parser.add_argument('-M','--metadata', help="Extraer Metadata de imagenes en un link('argumento --link requerido')",action='store_true')
     parser.add_argument('-L', '--link', help="Ingresar link de pagina web a analizar")
@@ -26,7 +27,7 @@ def main():
         if args.link:
             import metadataScrapper
             logging.info("Metadata Scan Started on " + args.link)
-            metadataScrapper.Metadata(args.link)
+            Report.report(metadataScrapper.Metadata(args.link),"Metadata Scrapper")
         else:
             logging.warning("Falta de Argumentos")
             parser.error("--metadata requires --link.")
@@ -34,10 +35,10 @@ def main():
         import autoNmap
         if args.public:
             logging.info("Nmap Scan Public Started")
-            autoNmap.exec(scan="public")
+            Report.report(autoNmap.exec(scan="public"),"Nmap Public Scan")
         elif args.private:
             logging.info("Nmap Scan Private Started")
-            autoNmap.exec(scan="private")
+            Report.report(autoNmap.exec(scan="private"),"Nmap Private Scan")
         else:
             logging.warning("Falta de Argumentos")
             parser.error("--nmap requires --private or --public.")
@@ -46,10 +47,10 @@ def main():
         if args.host:
             if args.host and args.user and args.password:
                 logging.info("FTP Dir Scanner Started")
-                print(ftpScanner.dir(args.host,args.user,args.password,args.anonymous))
+                Report.report(ftpScanner.dir(args.host,args.user,args.password,args.anonymous),"FTP Scanner Authenticated")
             elif args.anonymous:
                 logging.info("FTP Dir Scanner Started")
-                print(ftpScanner.dir(args.host,"","",args.anonymous))
+                Report.report(ftpScanner.dir(args.host,"","",args.anonymous),"FTP Scanner Anonymous")
         else:
             logging.warning("Falta de Argumentos")
             parser.error("--ftp requires --host and --user --password or --anonymous.")
@@ -57,7 +58,7 @@ def main():
         import hunter
         if args.organizacion and args.apiKey:
             logging.info("Hunter Scan Started Over: "+ args.organizacion)
-            hunter.main(args.apiKey,args.organizacion)
+            Report.report(hunter.main(args.apiKey,args.organizacion),"Hunter Scan")
         else:
             logging.warning("Falta de Argumentos")
             parser.error("--hunter requires --organizacion and --apiKey.")

@@ -57,6 +57,7 @@ def Metadata(url):
         **Metadata**
         This Module is the main module to start the extraction of the exif info
     """
+    out = ""
     furl = []
     if not os.path.exists('images'):
         os.makedirs('images')
@@ -80,18 +81,19 @@ def Metadata(url):
         #print(imgurl.split("/")[-1])
         save_image(fpath,imgurl.split("/")[-1])
         with open(f"txt/{imgurl.split('/')[-1].split('.')[0]}.txt","w+") as txt: 
-            print (f"[+] Metadata for file: {imgurl}")
+            out+=f"[+] Metadata for file: {imgurl}"
             try:
                 exif = get_exif_metadata(fpath)
                 coords = decode_gps_info(exif)
                 txt.write(f"[+] Metadata for file: {imgurl}")
                 for metadata in exif:
-                    print(coords)
-                    print (f"Metadata: {metadata} - Value: {exif[metadata]}\n")
+                    out += coords
+                    out += f"Metadata: {metadata} - Value: {exif[metadata]}\n"
                     txt.writelines(f"\n Metadata: {metadata} - Value: {exif[metadata]}\n {coords}")
             except:
                 import sys, traceback, PIL
                 traceback.print_exc(file=sys.stdout)
     os.chdir(temp)
+    return out
 
 

@@ -37,6 +37,6 @@ def privIp(): #Github Phanthaihuan
 def exec(scan):
     if scan == "private":
         segmento = ".".join(privIp().split('.')[0:3])+".0/24"
-        print(scanner(segmento))
+        return scanner(segmento)
     elif scan == "public":
-        print(scanner(publicIP))
+        return scanner(publicIP())

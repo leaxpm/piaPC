@@ -52,4 +52,4 @@ def main(apiKey,organizacion):
     else:
         #print(datosEncontrados)
         GuardarInformacion(datosEncontrados, organizacion)
-        print("Datos Guardados en Hunter"+organizacion+".xlsx")
+        return datosEncontrados+"\nOutput Exported to: "+organizacion+".xlsx"
