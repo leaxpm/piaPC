@@ -6,6 +6,6 @@ def report(info,activity):
         This Module Generate the Report 
     """
     time = datetime.datetime.now()
-    report = "Activity [ "+activity+" ]"+"\n"+info+"\n"+"Report Generated At: "+time
+    report = "Activity [ "+str(activity)+" ]"+"\n"+str(info)+"\n"+"Report Generated At: "+str(time)
 
     return report
